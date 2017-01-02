@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <!--<div class="container-fluid">-->
+  <nouislider [connect]="true" [min]="0" [max]="72" [step]="1" [(ngModel)]="someRange" (change)="onChange($event)" [config]="sliderConfig"></nouislider>
+  <elec-chart></elec-chart>
+</div>
+<div class="jumbotron">
+  <table class="table table-responsive table-condensed">
+    <tr>
+      <th *ngFor="let label of lineChartLabels"></th>
+    </tr>
+    <tr *ngFor="let d of lineChartData">
+      <td *ngFor="let label of lineChartLabels; let j=index"></td>
+    </tr>
+  </table>
+</div>

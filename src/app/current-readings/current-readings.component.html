@@ -1,0 +1,4 @@
+<h1>Current readings</h1>
+    <!--<h2 *ngFor="let aReading of readings | async">Power = {{aReading.power}}</h2>-->
+    <h2>Power = {{getPower()}}</h2>
+<justgage [max]="100" [value]="getPower()"></justgage>

@@ -1,0 +1,23 @@
+<!--<nav class="navbar navbar-light bg-faded">-->
+<!--<nav class="navbar navbar-dark bg-primary">-->
+<nav class="navbar navbar-dark bg-inverse">
+  <div class="navbar-header">
+    <a class="navbar-brand" [routerLink]="['/']">Electricity Monitor</a>  
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="exCollapsingNavbar2"
+      aria-expanded="false" aria-label="Toggle navigation"></button>    
+  </div>
+
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+    <ul class="nav navbar-nav">
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" (click)="isNavbarCollapsed = !isNavbarCollapsed" [routerLink]="['/current']">Current readings</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" (click)="isNavbarCollapsed = !isNavbarCollapsed" [routerLink]="['/recent']">Recent readings</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" (click)="isNavbarCollapsed = !isNavbarCollapsed" [routerLink]="['/historic']">Historic readings</a>
+      </li>
+    </ul>
+  </div>
+</nav>
