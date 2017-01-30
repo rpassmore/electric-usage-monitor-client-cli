@@ -12,7 +12,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CurrentReadingsComponent {
   public reading: Reading;  
-  //public readings: Observable<Reading>;
+  //  public readings: Observable<Reading>;
 
   constructor(private _readingsService: ReadingsService) {
   }
@@ -23,13 +23,8 @@ export class CurrentReadingsComponent {
 
   private getCurrentReadings() {
     this._readingsService.getCurrentReadings().subscribe(data => this.reading = data);
-    //this.readings = this._readingsService.getCurrentReadings();
-  }
-
-  public getPower() : Number {
-    //return this.reading.power;    
-    return 56;
-  }
+    //  this.readings = this._readingsService.getCurrentReadings();
+  } 
 }
 
 
